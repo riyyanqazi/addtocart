@@ -7,62 +7,69 @@ let cardlist = document.querySelector(".cardlist");
 
 let productsDetails = [
   {
-    productname: "Lenovo Legion",
-    p_img:
-      "https://cdn.mos.cms.futurecdn.net/v2/t:0,l:437,cw:1125,ch:1125,q:80,w:1125/qqzaDJnM4UeYkV3bqP7JiK.jpg",
-    p_des:
-      "A powerful gaming laptop featuring the latest RTX graphics and a high-refresh-rate display for seamless gameplay.",
-    price: 2000,
+    productname: "Classic Oxford Button-Down",
+    p_img: './images/product1.jpg',
+    p_des: "A versatile wardrobe staple made from premium heavy cotton. Perfect for the office or dinner.",
+    price: 45,
     button: "Add to Cart",
   },
   {
-    productname: "MacBook Air M2",
-    p_img:
-      "https://www.texitech.com/wp-content/uploads/2026/01/Untitled-design-2026-01-23T094532.413.webp",
-    p_des:
-      "Strikingly thin and fast, the MacBook Air features the M2 chip, offering incredible performance and up to 18 hours of battery life.",
-    price: 12000,
-
+    productname: "Slim-Fit Denim Shirt",
+    p_img: './images/product2.jpg',
+    p_des: "Light-wash indigo denim with a modern slim cut. Features pearl snap buttons and a rugged finish.",
+    price: 55,
     button: "Add to Cart",
   },
   {
-    productname: "Dell XPS 13",
-    p_img:
-      "https://hf-store.pk/wp-content/uploads/2024/05/WhatsApp-Image-2024-05-04-at-5.13.32-AM-scaled.jpeg",
-    p_des:
-      "The ultimate ultra-portable laptop with a stunning InfinityEdge display and premium aluminum craftsmanship.",
-    price: 3000,
-
+    productname: "Linen Summer Shirt",
+    p_img: './images/product3.jpg',
+    p_des: "Ultra-breathable linen blend in a relaxed fit. Keeps you cool and stylish during beach days.",
+    price: 40,
     button: "out of stock",
   },
   {
-    productname: "HP Spectre x360",
-    p_img:
-      "https://sm.pcmag.com/pcmag_uk/photo/l/lenovo-thi/lenovo-thinkpad-x1-carbon-gen-13_qph1.jpg",
-    p_des:
-      "A versatile 2-in-1 laptop that rotates 360 degrees, perfect for creative professionals who need a tablet and laptop in one.",
-    price: 22000,
-
+    productname: "Heavyweight Flannel Plaid",
+    p_img: './images/product4.jpg',
+    p_des: "Warm, double-brushed cotton flannel in a classic red and black buffalo check pattern.",
+    price: 50,
     button: "Add to Cart",
   },
   {
-    productname: "ASUS ROG Zephyrus",
-    p_img:
-      "https://digitectechnologies.co.ke/wp-content/uploads/2024/07/WhatsApp-Image-2024-07-31-at-18.23.58_3b051a40.jpg",
-    p_des:
-      "Engineered for elite gaming, this laptop combines a slim design with heavy-duty cooling and top-tier processing power.",
-    price: 2000,
-
+    productname: "Mandarin Collar Tunic",
+    p_img: './images/product5.jpg',
+    p_des: "A modern, collarless design for a minimalist aesthetic. Made from a soft cotton-silk blend.",
+    price: 65,
     button: "out of stock",
   },
+  {
+    productname: "Essential White Dress Shirt",
+    p_img: './images/product6.jpg',
+    p_des: "Crisp, wrinkle-resistant poplin with a spread collar. The perfect match for any tailored suit.",
+    price: 60,
+    button: "Add to Cart",
+  },
+  {
+    productname: "Tropical Print Hawaiian",
+    p_img: './images/product7.jpg',
+    p_des: "Bold floral patterns on silky rayon fabric. Features a relaxed camp collar for vacation vibes.",
+    price: 35,
+    button: "Add to Cart",
+  },
+  {
+    productname: "Corduroy Work Shirt",
+    p_img: './images/product8.jpg',
+    p_des: "Fine-wale corduroy with reinforced stitching. Durable enough for the outdoors, stylish enough for the city.",
+    price: 70,
+    button: "Add to Cart",
+  }
 ];
 
 let total = 0;
 productsDetails.forEach((product) => {
-  let card = document.createElement("card");
-  card.style.width = "300px";
-  card.style.border = "2px solid black";
+  let card = document.createElement("div");
+  card.style.width = "280px";
   card.style.padding = "10px";
+card.style.border='2px solid grey'
   card.style.borderRadius = "10px";
   card.style.textAlign = "center";
 
@@ -71,8 +78,7 @@ productsDetails.forEach((product) => {
 
   let productImg = document.createElement("img");
 
-  productImg.style.width = "100%";
-  productImg.style.height = "200px";
+  productImg.style.height = "300px";
   productImg.style.overflow = "hidden";
 
   productImg.style.objectFit = "cover";
