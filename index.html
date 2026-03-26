@@ -56,7 +56,6 @@
     }
     .cardlist {
       width: 320px;
-      height: 400px;
       background: #f9fafb;
       border: 1px solid #e5e7eb;
       border-radius: 12px;
@@ -79,13 +78,40 @@
     }
     img {
       width: 100%;
-    }  .top {
+    }
+    .top {
       display: flex;
       justify-content: space-between;
       position: absolute;
       left: 85%;
     }
-    @media (max-width: 576px) {
+
+    .cancel:hover {
+      cursor: pointer;
+    }
+
+    .cardlist {
+      width: 200px;
+      border: 2px solid grey;
+      display: none;
+      flex-direction: column;
+      gap: 10px;
+    }
+    .close_cart {
+      display: none;
+      position: absolute;
+      left: -16px;
+      top: -20px;
+      background-color: black;
+      color: white;
+      border-radius: 4px;
+      padding: 4px 10px 4px 10px;
+      transform: rotate(-15deg);
+    }
+    .close_cart:hover {
+      cursor: pointer;
+    }
+     @media (max-width: 576px) {
       img {
         width: 280px;
       }
@@ -103,42 +129,12 @@
 }
         
     }
-    .cancel:hover {
-      cursor: pointer;
-    }
-
-  
-
-    .cardlist{
-      width: 200px;
-      border: 2px solid grey;
-      display: none;
-      flex-direction: column;
-      gap: 10px;
-    }
-.close_cart{
-    display: none;
-position: absolute;
-left: -16px;
-top: -20px;
-background-color: black;
-color: white;
-border-radius: 4px;
-padding: 4px 10px 4px 10px;
-transform: rotate(-15deg);
-}
-.close_cart:hover{
-cursor: pointer;
-}
-
-
-
-</style>
+  </style>
   <body>
     <h1 class="page">Product's</h1>
     <div class="top">
-        <div class="cardlist">
-            <span class="close_cart">Close</span>
+      <div class="cardlist">
+        <span class="close_cart">Close</span>
         <div
           class="cart-summary"
           style="margin-top: 20px; padding: 15px; border-top: 2px solid #eee"
