@@ -1,109 +1,138 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>add to cart</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-</head>
-<style>
-    body{
-        background-color: rgb(236, 252, 244);
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+  </head>
+  <style>
+    body {
+      background-color: rgb(236, 252, 244);
     }
-    header{
-        width: 1000px;
-        margin: auto;
+    header {
+      width: 1000px;
+      margin: auto;
     }
-    
-    ul, li{
-        display: flex;
-        font-size: 24px;
-        color: rgb(0, 0, 0);
-        font-family: 'Courier New', Courier, monospace;
-        flex-direction: row;
-        justify-content: space-around;
+
+    ul,
+    li {
+      display: flex;
+      font-size: 24px;
+      color: rgb(0, 0, 0);
+      font-family: "Courier New", Courier, monospace;
+      flex-direction: row;
+      justify-content: space-around;
     }
-    li:hover{
-        cursor: pointer;
+    li:hover {
+      cursor: pointer;
     }
-   section{
-    padding: 30px;
-   }
-    
-    .main{
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 20px;
+    section {
+      padding: 30px;
     }
-    button{
-        padding: 6px 20px 6px 20px;
-        background-color: black;
-        color: white;
-        border: none;
-        border-radius: 4px;
+
+    .main {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
     }
-    button:hover{
-        cursor: pointer;
+    button {
+      padding: 6px 20px 6px 20px;
+      background-color: black;
+      color: white;
+      border: none;
+      border-radius: 4px;
     }
-    img{
-object-fit: cover;
-width: 100%;
+    button:hover {
+      cursor: pointer;
+    }
+    img {
+      object-fit: cover;
+      width: 100%;
     }
     .cardlist {
-    width: 320px;
-    height: 400px;
-    background: #f9fafb;
-    border: 1px solid #e5e7eb;
-    border-radius: 12px;
-    padding: 15px;
-    overflow-y: auto; /* Adds a scrollbar if the cart gets long */
-    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+      width: 320px;
+      height: 400px;
+      background: #f9fafb;
+      border: 1px solid #e5e7eb;
+      border-radius: 12px;
+      padding: 15px;
+      overflow-y: auto; /* Adds a scrollbar if the cart gets long */
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    }
+
+    /* Scrollbar Styling for a premium feel */
+    .cardlist::-webkit-scrollbar {
+      width: 6px;
+    }
+    .cardlist::-webkit-scrollbar-thumb {
+      background: #ccc;
+      border-radius: 10px;
+    }
+    .page {
+      font-size: 40px;
+    }
+    img {
+      width: 100%;
+    }
+    @media (max-width: 576px) {
+      img {
+        width: 280px;
+      }
+    }
+    .cancel:hover {
+      cursor: pointer;
+    }
+
+    .top {
+      display: flex;
+      justify-content: space-between;
+      position: absolute;
+      left: 85%;
+    }
+    .cardlist{
+      width: 200px;
+      border: 2px solid grey;
+      flex-direction: column;
+      gap: 10px;
+    }
+.close_cart{
+position: absolute;
+left: -16px;
+top: -20px;
+background-color: black;
+color: white;
+border-radius: 4px;
+padding: 4px 10px 4px 10px;
+transform: rotate(-15deg);
 }
 
-/* Scrollbar Styling for a premium feel */
-.cardlist::-webkit-scrollbar {
-    width: 6px;
-}
-.cardlist::-webkit-scrollbar-thumb {
-    background: #ccc;
-    border-radius: 10px;
-}
-.page{
-    font-size: 40px;
-}
-img{
-    width: 100%;
-}
-@media (max-width:576px) {
-img{
-    width: 280px;
-}
-
-}
-
-    
 
 </style>
-<body>
-
+  <body>
     <h1 class="page">Product's</h1>
-    <section>
-        <div class="main">
-
-
-
+    <div class="top">
+<span class="close_cart">Close</span>
+        <div class="cardlist">
+        <div
+          class="cart-summary"
+          style="margin-top: 20px; padding: 15px; border-top: 2px solid #eee"
+        >
+          <h3 style="display: flex; justify-content: space-between">
+            Total: <span id="total-display">$0</span>
+          </h3>
         </div>
+        <button class="Purchase-items">Purchase items</button>
+      </div>
+    </div>
+    <section>
+      <div class="main"></div>
     </section>
 
-
-<div style="width: 200px; border: 2px solid red; display: flex;flex-direction: column; gap: 10px;"   class="cardlist">
-<div class="cart-summary" style="margin-top: 20px; padding: 15px; border-top: 2px solid #eee;">
-    <h3 style="display: flex; justify-content: space-between;">
-        Total: <span id="total-display">$0</span>
-    </h3>
-</div>
-</div>
     <script src="addtocart.js"></script>
-</body>
+  </body>
 </html>
