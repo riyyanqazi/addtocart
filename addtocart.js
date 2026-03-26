@@ -101,6 +101,9 @@ productsDetails.forEach((product) => {
   let btn = document.createElement("button");
   btn.innerText = product.button;
 
+
+  // addtocart
+
   btn.addEventListener("click", () => {
     // Create a container for the cart row
     let cartItem = document.createElement("div");
@@ -115,6 +118,8 @@ productsDetails.forEach((product) => {
         margin-bottom: 8px;
         border-radius: 8px;
     `;
+cardlist.style.display='flex'
+  cartbox.style.display="inline-block"
 
     // Create the Mini Image
     let img = document.createElement("img");
@@ -167,5 +172,6 @@ productsDetails.forEach((product) => {
 });
 
 cartbox.addEventListener("click", () => {
+  cartbox.style.display="none"
   cardlist.style.display = "none";
 });

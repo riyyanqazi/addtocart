@@ -75,6 +75,7 @@
     }
     .page {
       font-size: 40px;
+      text-align: center;
     }
     img {
       width: 100%;
@@ -83,6 +84,17 @@
       img {
         width: 280px;
       }
+    }
+    @media (max-width:768px) {
+        .cardlist{
+            position: absolute;
+right: 100%;
+        }
+        .close_cart{
+left: -240%;
+top: -22%;
+        }
+        
     }
     .cancel:hover {
       cursor: pointer;
@@ -97,10 +109,12 @@
     .cardlist{
       width: 200px;
       border: 2px solid grey;
+      display: none;
       flex-direction: column;
       gap: 10px;
     }
 .close_cart{
+    display: none;
 position: absolute;
 left: -16px;
 top: -20px;
@@ -110,6 +124,10 @@ border-radius: 4px;
 padding: 4px 10px 4px 10px;
 transform: rotate(-15deg);
 }
+.close_cart:hover{
+cursor: pointer;
+}
+
 
 
 </style>
