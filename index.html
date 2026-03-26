@@ -79,6 +79,11 @@
     }
     img {
       width: 100%;
+    }  .top {
+      display: flex;
+      justify-content: space-between;
+      position: absolute;
+      left: 85%;
     }
     @media (max-width: 576px) {
       img {
@@ -86,26 +91,24 @@
       }
     }
     @media (max-width:768px) {
-        .cardlist{
-            position: absolute;
-right: 100%;
-        }
-        .close_cart{
-left: -240%;
-top: -22%;
-        }
+        
+        
+   .top {
+
+   display: flex;
+      justify-content: space-between;
+      position: absolute;
+      left: 45%;
+
+}
         
     }
     .cancel:hover {
       cursor: pointer;
     }
 
-    .top {
-      display: flex;
-      justify-content: space-between;
-      position: absolute;
-      left: 85%;
-    }
+  
+
     .cardlist{
       width: 200px;
       border: 2px solid grey;
@@ -134,8 +137,8 @@ cursor: pointer;
   <body>
     <h1 class="page">Product's</h1>
     <div class="top">
-<span class="close_cart">Close</span>
         <div class="cardlist">
+            <span class="close_cart">Close</span>
         <div
           class="cart-summary"
           style="margin-top: 20px; padding: 15px; border-top: 2px solid #eee"
